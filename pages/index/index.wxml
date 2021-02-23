@@ -1,0 +1,8 @@
+<view class="pyg_index">
+  <!-- 搜素框 -->
+  <SearchInput />
+  <!-- 轮播图 -->
+  <HomeSwiper swiperList = "{{swiperList}}"/>
+  <!-- 分类导航数据 -->
+  <HomeNav cateList = "{{cateList}}"/>
+</view>

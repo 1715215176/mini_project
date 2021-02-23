@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "SearchInput" : "../../components/home/SearchInput/SearchInput",
+    "HomeSwiper" : "../../components/home/HomeSwiper/HomeSwiper",
+    "HomeNav" : "../../components/home/HomeNav/HomeNav"
+  }
+}
