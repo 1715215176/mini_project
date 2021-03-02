@@ -5,4 +5,6 @@
   <HomeSwiper swiperList = "{{swiperList}}"/>
   <!-- 分类导航数据 -->
   <HomeNav cateList = "{{cateList}}"/>
+  <!--获取楼层数据-->
+  <HomeShow floorList = "{{floorList}}"></HomeShow>
 </view>

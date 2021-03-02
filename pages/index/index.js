@@ -2,7 +2,8 @@ import { request } from "../../request/request.js"
 Page({
   data: {
     swiperList: [],
-    cateList: []
+    cateList: [],
+    floorList: []
   },
   //页面开始加载的时候
   onLoad: function (options) {
@@ -17,26 +18,38 @@ Page({
     // })
     this.getSwiperList();
     this.getCateList();
+    this.getFloorList();
   },
   getSwiperList() {
     request({
-      url: "https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata"
+      url: "/home/swiperdata"
     }).then(
       result => {
         this.setData({
-          swiperList: result.data.message
+          swiperList: result
         })
       }
     )
   },
   getCateList() {
     request({
-      url: "https://api-hmugo-web.itheima.net/api/public/v1/home/catitems"
+      url: "/home/catitems"
+    }).then(
+      result => {
+        this.setData({
+          cateList: result
+        })
+      }
+    )
+  },
+  getFloorList() {
+    request({
+      url: "/home/floorData"
     }).then(
       result => {
         console.log(result);
         this.setData({
-          cateList: result.data.message
+          floorList: result
         })
       }
     )

@@ -1,2 +1,44 @@
-<!--pages/category/index.wxml-->
-<text>pages/category/index.wxml</text>
+<viwe class="cates">
+  <!-- 搜索框 -->
+  <SearchInput></SearchInput>
+  <view class="cates_container">
+    <!-- 左侧菜单 -->
+    <scroll-view class="left_menu" scroll-y="{{true}}">
+       <view class="menu_item {{index === currentIdex? 'active' : ''}}"
+       wx:for="{{LeftContent}}"
+       wx:key="index"
+       bindtap = "itemClick"
+       data-index = "{{index}}"
+       >
+        {{item}}
+       </view>
+    </scroll-view>
+    <!-- 右侧菜单 -->
+    <scroll-view scroll-top="{{scrollTop}}" class="right_content" scroll-y="{{true}}">
+      <view class="goods_group"
+      wx:for="{{RightContent}}"
+      wx:for-index="index1"
+      wx:for-item="item1"
+      wx:key="index1"
+      >
+        <view class="good_title">
+          <text class="fuhao">/</text>
+          <text>{{item1.cat_name}}</text>
+          <text class="fuhao">/</text>
+        </view> 
+        <view class="goods_list">
+          <navigator
+           wx:for="{{item1.children}}"
+           wx:for-index="index2"
+           wx:for-item="item2"
+           wx:key="index2"
+           url="/pages/goods_list/goods_list?cid={{item2.cat_id}}"
+          >
+            <image src="{{item2.cat_icon}}" mode="widthFix"></image>
+            <view class="goods_name">{{item2.cat_name}}</view>   
+          </navigator>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</viwe>

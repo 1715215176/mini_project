@@ -2,6 +2,7 @@
   "usingComponents": {
     "SearchInput" : "../../components/home/SearchInput/SearchInput",
     "HomeSwiper" : "../../components/home/HomeSwiper/HomeSwiper",
-    "HomeNav" : "../../components/home/HomeNav/HomeNav"
+    "HomeNav" : "../../components/home/HomeNav/HomeNav",
+    "HomeShow" : "../../components/home/HomeShow/HomeShow"
   }
 }
