@@ -41,5 +41,27 @@ Page({
       urls,
       current
     })
+  },
+  cartAdd(){
+    // 获取缓存中的购物车数组
+    let cart = wx.getStorageSync("cart")||[];
+    // 判断商品是否存在于数组的购物车当中
+    let index = cart.findIndex(v => v.goods_id === this.goodsInfo.goods_id);
+    if(index === -1){
+      this.goodsInfo.checked = true;
+      this.goodsInfo.num = 1;
+      cart.push(this.goodsInfo);
+    }else{
+      cart[index].num ++;
+    }
+    // 重新把购物车添加到缓存当中
+    wx.setStorageSync("cart",cart);
+    // 弹窗提示
+    wx.showToast({
+      title: '添加成功',
+      icon : 'success',
+      // 防止手抖
+      mast: true
+    })
   }
 })

@@ -1,0 +1,14 @@
+.revice_address_row .address_btn {
+  padding: 10rpx 0;
+}
+.revice_address_row .addressShow {
+  display: flex;
+}
+.revice_address_row .addressShow .address_info {
+  flex: 7;
+  padding: 20rpx;
+}
+.revice_address_row .addressShow .address_photo {
+  flex: 3;
+  padding: 20rpx;
+}

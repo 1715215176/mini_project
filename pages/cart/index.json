@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "CartList" : "../../components/cart/cartList/CartList",
+    "Address" : "../../components/cart/address/Address"
+  },
+  "navigationBarTitleText": "购物车"
 }

@@ -1,66 +1,19 @@
 // pages/cart/index.js
+// 获取用户的收货地址 chooseAddress
+// 获取用户对收货地址的权限 scope authSetting scope.address
+// 假设用户点及了取消 此时的scope 变成了false、
+// 假设用户没有点击获取地址 scope 是undefined
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    address: {},
+    cart: []
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  onShow(){
+    const address = wx.getStorageSync("address");
+    const cart = wx.getStorageSync('cart')
+    this.setData({
+      address,
+      cart
+    })
   }
 })

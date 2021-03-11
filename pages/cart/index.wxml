@@ -1,2 +1,4 @@
-<!--pages/cart/index.wxml-->
-<text>pages/cart/index.wxml</text>
+<!--  收货地址信息 -->
+<Address address = "{{address}}"></Address>
+<!-- 购物车内容 -->
+<CartList cart = "{{cart}}"></CartList>

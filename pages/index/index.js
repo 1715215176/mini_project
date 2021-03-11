@@ -47,7 +47,6 @@ Page({
       url: "/home/floorData"
     }).then(
       result => {
-        console.log(result);
         this.setData({
           floorList: result
         })

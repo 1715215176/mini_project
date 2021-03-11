@@ -1,0 +1,15 @@
+<view class="revice_address_row">
+<!-- 当收货地址不存在的时候添加收货地址 存在的时候影藏按钮 -->
+  <view class="address_btn" wx:if="{{!address.userName}}">
+    <button bindtap = "chooseAddress" type="primary" plain="{{true}}">+获取收获地址</button>
+  </view>
+  <view wx:else class="addressShow">
+    <view class="address_info">
+      <view>收货人:{{address.userName}}</view>
+      <view>{{address.provinceName + address.cityName + address.countyName + address.detailInfo}}</view>
+    </view>
+    <view class="address_photo">
+      <view>{{address.telNumber}}</view>
+    </view>
+  </view>
+</view>
