@@ -1,4 +1,17 @@
-<!--  收货地址信息 -->
-<Address address = "{{address}}"></Address>
+<!-- 收货地址信息 -->
+<Address address="{{address}}"></Address>
 <!-- 购物车内容 -->
-<CartList cart = "{{cart}}"></CartList>
+<CartList cart="{{cart}}" binditemChange = "itemChange" bindnumChange = "numChange"></CartList>
+<!-- 底部工具栏 -->
+<view class="footer_bar">
+    <view class="allChoose">
+        <checkbox-group bindchange = "allChange">
+            <checkbox checked="{{allChecked}}">全选</checkbox>
+        </checkbox-group>
+    </view>
+    <view class="total_price">
+        <view class="total">合计：￥{{totalPrice}}</view>
+        <view >包含运费</view>
+    </view>
+    <view class="summarrize" bindtap = "handlePay">结算({{totalNum}})</view>
+</view>

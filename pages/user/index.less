@@ -1,0 +1,128 @@
+page {
+  background-color: rgb(187, 186, 186);
+}
+.user_info_warp {
+  height: 45vh;
+  overflow: hidden;
+  // background-color: var(--themeColor);
+  .login {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--themeColor);
+    font-size: 40rpx;
+    color: #fff;
+  }
+  .user_img_warp {
+    position: relative;
+    .user_bg {
+      height: 50vh;
+      filter: blur(10rpx);
+    }
+    .user_info {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 30%;
+      .user_mine_bg {
+        width: 100rpx;
+        height: 100rpx;
+        border-radius: 50%;
+        margin-left: 27rpx;
+      }
+      .user_name {
+        text-align: center;
+        padding-top: 10rpx;
+        color: #fff;
+        font-size: 40rpx;
+      }
+    }
+  }
+}
+.user_content {
+  position: relative;
+  .his_main {
+    position: absolute;
+    width: 90vw;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -60rpx;
+    // 历史足迹
+    .history_warp {
+      background: #fff;
+      width: 100%;
+      height: 100rpx;
+      display: flex;
+      justify-content: space-around;
+      navigator {
+        height: 100%;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .his_num {
+          color: var(--themeColor);
+        }
+      }
+    }
+    //我的订单
+    .orders_warp {
+        background-color: #fff;
+        margin-top: 15rpx;
+      .order_title {
+        padding: 0 20rpx;
+        height: 70rpx;
+        line-height: 70rpx;
+        font-size: larger;
+        border-bottom: 1px solid #888;
+      }
+      .order_content {
+        background: #fff;
+        width: 100%;
+        height: 100rpx;
+        display: flex;
+        justify-content: space-around;
+        navigator {
+          height: 100%;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+    .address_warp{
+        margin-top: 20rpx;
+        padding: 0 20rpx;
+        height: 70rpx;
+        background-color: #fff;
+        line-height: 70rpx;
+        
+    }
+    .app_info_warp{
+        margin-top: 20rpx;
+        background-color: #fff;
+        .app_info_item{
+            border-bottom: 1px solid #888;
+            height: 70rpx;
+            line-height: 70rpx;
+            padding: 0 20rpx;
+        }
+        .photo{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    .recommend_warp{
+        margin-top: 20rpx;
+        padding: 0 20rpx;
+        height: 70rpx;
+        background-color: #fff;
+        line-height: 70rpx;
+    }
+  }
+}

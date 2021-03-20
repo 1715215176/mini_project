@@ -18,7 +18,7 @@
   border-bottom: 1px solid #888;
   .goods_name {
     flex: 5;
-    color: #000; ;
+    color: #000;
     font-size: 30rpx;
     padding: 0 10rpx;
     display: -webkit-box;
@@ -33,17 +33,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    .icon-shoucang1 {
+      color: orangered;
+    }
   }
 }
-.goods_info{
-  .goods_info_title{
-  color: var(--themeColor);
-  font-size: 35rpx;
-  font-weight: 600;
-  padding: 10rpx;
+.goods_info {
+  .goods_info_title {
+    color: var(--themeColor);
+    font-size: 35rpx;
+    font-weight: 600;
+    padding: 10rpx;
   }
 }
-.btm_tool{
+.btm_tool {
   border-top: 1px solid #ccc;
   position: fixed;
   bottom: 0;
@@ -52,8 +55,8 @@
   height: 90rpx;
   display: flex;
   background-color: #fff;
-  
-  .tool_item{
+
+  .tool_item {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -61,7 +64,7 @@
     align-items: center;
     background-color: rgb(219, 219, 219);
     position: relative;
-    button{
+    button {
       position: absolute;
       left: 0;
       bottom: 0;
@@ -70,18 +73,18 @@
       opacity: 0;
     }
   }
-  .tool_cart{
+  .tool_cart {
     flex: 2;
     line-height: 90rpx;
     text-align: center;
     color: #fff;
-    background: linear-gradient(to right, #dbc819,#e0ce26);
+    background: linear-gradient(to right, #dbc819, #e0ce26);
   }
-  .tool_buy{
+  .tool_buy {
     flex: 2;
     line-height: 90rpx;
     text-align: center;
     color: #fff;
-    background: linear-gradient(to right, #c04122,#c70a04);
+    background: linear-gradient(to right, #c04122, #c70a04);
   }
 }

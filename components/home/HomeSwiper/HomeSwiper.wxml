@@ -1,7 +1,7 @@
 <view class="index_swiper">
     <swiper autoplay="{{true}}" circular="{{true}}" indicator-dots="{{true}}" interval="3000">
       <swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
-        <navigator>
+        <navigator url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
           <image mode="widthFix" src="{{item.image_src}}" />
         </navigator>
       </swiper-item>

@@ -6,7 +6,9 @@
     "pages/user/index",
     "pages/search/index",
     "pages/goods_list/goods_list",
-    "pages/goods_detail/index"
+    "pages/goods_detail/index",
+    "pages/pay/index",
+    "pages/collect/index"
 
   ],
   "window": {

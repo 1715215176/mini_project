@@ -1,5 +1,5 @@
 <view class="cate_list">
-  <navigator wx:for="{{cateList}}" wx:key="index">
+  <navigator wx:for="{{cateList}}" wx:key="index" url="/pages/category/index" open-type="switchTab">
     <image mode="widthFix" src="{{item.image_src}}" />
   </navigator>
 </view>

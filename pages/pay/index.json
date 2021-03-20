@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "Address" : "../../components/cart/address/Address"
+  },
+  "navigationBarTitleText": "支付"
+}

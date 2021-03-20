@@ -25,6 +25,7 @@ Page({
       url: "/home/swiperdata"
     }).then(
       result => {
+        console.log(result);
         this.setData({
           swiperList: result
         })

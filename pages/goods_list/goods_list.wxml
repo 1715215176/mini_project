@@ -1,5 +1,5 @@
 <SearchInput></SearchInput>
-<Tabs tabs = "{{tabs}}" bindtabsItemChange="tabsItemChange">
+<Tabs tabs = "{{tabs}}" bindtabsItemChange= "tabsItemChange">
   <block wx:if="{{tabs[0].isActive}}">
     <view class="first_tab">
       <navigator

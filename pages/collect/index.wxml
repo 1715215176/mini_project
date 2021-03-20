@@ -1,0 +1,24 @@
+<Tabs tabs = "{{tabs}}" bindtabsItemChange= "tabsItemChange"></Tabs>
+<view class="cart_content">
+  <view class="cart_main">
+    <navigator class="cart_item"
+    wx:for="{{goodsList}}"
+    wx:key="goods_id"
+    url="/pages/goods_detail/index?goods_id={{item.goods_id}}"
+    >
+      <!-- 商品图片 -->
+      <navigator class="cart_image_warp">
+        <image mode="widthFix" src="{{item.goods_small_logo}}"/>
+      </navigator>
+      <!-- 商品信息 -->
+      <view class="cart_info_warp">
+        <view class="goods_name">{{item.goods_name}}</view>
+        <view class="goods_price_warp">
+          <view class="goods_price">￥{{item.goods_price}}</view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>
+<view class="footer_bar">
+</view>

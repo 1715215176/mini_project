@@ -1,13 +1,14 @@
 <view class="cart_content">
   <view class="cart_title iconfont icon-gouwuche">购物车</view>
   <view class="cart_main">
-    <view class="cart_item"
+    <block wx:if="{{cart.length !== 0}}">
+       <view class="cart_item"
     wx:for="{{cart}}"
     wx:key="goods_id"
     >
       <!-- 复选框 -->
       <view class="cart_check_warp">
-        <checkbox-group bindchange="">
+        <checkbox-group data-id = "{{item.goods_id}}" bindchange= "headleItemChange">
           <checkbox checked="{{item.checked}}"></checkbox>
         </checkbox-group>
       </view>
@@ -21,12 +22,17 @@
         <view class="goods_price_warp">
           <view class="goods_price">￥{{item.goods_price}}</view>
           <view class="goods_num">
-            <view class="check goods_sub">-</view>
+            <view class="check goods_sub" bindtap = "numChange" data-id = "{{item.goods_id}}" data-operation= "{{-1}}">-</view>
             <view class="goods_count">{{item.num}}</view>
-            <view class="check goods_add">+</view>
+            <view class="check goods_add" bindtap = "numChange" data-id = "{{item.goods_id}}" data-operation = "{{1}}">+</view>
           </view>
         </view>
       </view>
     </view>
+    </block>
+    <block wx:else>
+      <view class="nullTip">暂无购买任何商品</view>
+      <image mode="widthFix" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fe1b1467beea0a9c7d6a56b32bac6d7e5dcd914f7c3e6-YTwUd6_fw658&refer=http%3A%2F%2Fhbimg.b0.upaiyun.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1618242466&t=edcfdbe55bdd592260994846c31a20dd"></image>
+    </block>
   </view>
 </view>

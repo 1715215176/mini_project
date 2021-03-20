@@ -1,0 +1,35 @@
+.footer_bar {
+  display: flex;
+  background-color: #d4c1c1;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 90rpx;
+}
+.footer_bar .allChoose {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer_bar .total_price {
+  flex: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 10rpx;
+}
+.footer_bar .total_price .total {
+  color: var(--themeColor);
+}
+.footer_bar .summarrize {
+  flex: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--themeColor);
+  color: #fff;
+  font-size: 30rpx;
+}
